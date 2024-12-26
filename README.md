@@ -1,2 +1,24 @@
 # Pic-Convert2Gif
-Translate batch images from JPG or PNG format to GIF format, and mitigate color loss as much as possible through dithering algorithm.
+
+将jpg或png格式的图片批量转换为gif格式，并通过抖动算法尽量减少色彩损失。
+
+## Language/语言
+
+- [English](README_Eng.md)
+- [简体中文](README.md)
+
+## 本项目说明
+
+因为旧版本QQ以及目前的手机版QQ不支持显示png格式图片的alpha通道，导致直接发送png图片时，会被随机添加白色或黑色背景。将png格式图片转为gif格式可以避免上述情况发生。
+
+目前简便的批量png转gif格式方法都会导致图片出现大量噪点，并严重损失色彩信息，本项目通过改变ffmpeg参数，极大地改善了所得gif图片质量。
+
+## 使用方法
+
+1. 安装[ffmpeg和ffprobe](https://www.ffmpeg.org/)，并添加到环境变量。（此处不提供教程，请善用搜索引擎）
+2. 下载本项目中两个`cmd`文件。
+3. 根据文件名，将需要使用的文件复制到需要转换的图片所在文件夹中，双击运行。
+
+## 注意
+
+本项目所转换出的gif图片为24帧/秒，匹配腾讯QQ所支持的帧率，如有其他需求请自行修改`cmd`文件。
